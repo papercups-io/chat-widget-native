@@ -1,0 +1,44 @@
+{
+  "name": "@papercups-io/chat-widget-native",
+  "version": "1.0.1",
+  "description": "Papercups chat widget for React Native",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/src/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "prepare": "bob build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "reichert621",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "dependencies": {
+    "query-string": "^6.13.1",
+    "react-native-webview": "^10.6.0"
+  },
+  "devDependencies": {
+    "@react-native-community/bob": "^0.16.2",
+    "@types/react": "^16.9.46",
+    "@types/react-native": "^0.63.8",
+    "react": "^16.13.1",
+    "react-native": "^0.63.2",
+    "typescript": "^3.9.7"
+  },
+  "@react-native-community/bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
+  },
+  "license": "MIT"
+}
