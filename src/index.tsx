@@ -44,6 +44,7 @@ export default function ChatWidget({
     // TODO: figure out the best way to handle identifying customers
     customer: JSON.stringify(customer),
   };
+  // TODO: update to production url when ready
   const iframeUrl =
     'https://chat-window-git-add-viewport-meta.papercups.vercel.app';
   const query = qs.stringify(config, {
