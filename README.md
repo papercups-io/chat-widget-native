@@ -18,7 +18,7 @@ npm install --save @papercups-io/chat-widget-native
 
 First, sign up at https://app.papercups.io/register to get your account token. Your account token is what you will use to pass in as the `accountId` prop below.
 
-**\*NB**: make sure to pass in an `external_id` with the `customer` prop so that we can identify the person you're chatting with and load their message history if you've chatted with them before! (See below for an example)\*
+***NB**: make sure to pass in an `external_id` with the `customer` prop so that we can identify the person you're chatting with and load their message history if you've chatted with them before! (See below for an example)*
 
 You can render the chat widget however you like. Here's how you might do it in a modal:
 
