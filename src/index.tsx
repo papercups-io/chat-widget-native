@@ -43,6 +43,7 @@ export default function ChatWidget({
     mobile: 1,
     // TODO: figure out the best way to handle identifying customers
     customer: JSON.stringify(customer),
+    metadata: JSON.stringify(customer),
   };
   // TODO: update to production url when ready
   const iframeUrl =

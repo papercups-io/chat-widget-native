@@ -20,6 +20,12 @@ export default function App() {
             title="Welcome to Papercups!"
             subtitle="We'll reply as soon as we can 😊"
             greeting="Hi there! :wave: Have any questions?"
+            baseUrl="https://alex-papercups-staging.herokuapp.com"
+            customer={{
+              name: 'Test User',
+              email: 'test@test.com',
+              external_id: '999',
+            }}
           />
         </View>
       </Modal>
