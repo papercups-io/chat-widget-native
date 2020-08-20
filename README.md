@@ -8,6 +8,8 @@
 
 <img width="383" alt="Screen Shot 2020-08-16 at 8 57 25 PM" src="https://user-images.githubusercontent.com/5264279/90348303-6c04d080-e003-11ea-8976-6f9d355ca4c8.png">
 
+Try it out! https://snack.expo.io/@reichertjalex/papercups
+
 ## Install
 
 ```bash
