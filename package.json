@@ -1,6 +1,6 @@
 {
   "name": "@papercups-io/chat-widget-native",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Papercups chat widget for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -12,6 +12,7 @@
   },
   "scripts": {
     "prepare": "bob build",
+    "pack": "npm pack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "reichert621",

@@ -17,7 +17,11 @@ type Props = {
   greeting?: string;
   customer?: CustomerMetadata | null;
   newMessagePlaceholder?: string;
+  agentAvailableText?: string;
+  agentUnavailableText?: string;
+  showAgentAvailability?: boolean;
   requireEmailUpfront?: boolean;
+  scrollEnabled?: boolean;
 };
 
 export default function ChatWidget({
@@ -29,6 +33,10 @@ export default function ChatWidget({
   greeting,
   newMessagePlaceholder,
   requireEmailUpfront,
+  agentAvailableText,
+  agentUnavailableText,
+  showAgentAvailability,
+  scrollEnabled = true,
   customer = {} as CustomerMetadata,
 }: Props) {
   const config = {
@@ -39,20 +47,22 @@ export default function ChatWidget({
     baseUrl,
     greeting,
     newMessagePlaceholder,
+    agentAvailableText,
+    agentUnavailableText,
     requireEmailUpfront: requireEmailUpfront ? 1 : 0,
+    showAgentAvailability: showAgentAvailability ? 1 : 0,
     mobile: 1,
     // TODO: figure out the best way to handle identifying customers
     customer: JSON.stringify(customer),
     metadata: JSON.stringify(customer),
   };
-  // TODO: update to production url when ready
-  const iframeUrl =
-    'https://chat-window-git-add-viewport-meta.papercups.vercel.app';
+
+  const iframeUrl = 'https://chat-widget.papercups.io';
   const query = qs.stringify(config, {
     skipEmptyString: true,
     skipNull: true,
   });
   const uri = `${iframeUrl}?${query}`;
 
-  return <WebView source={{uri}} />;
+  return <WebView source={{uri}} scrollEnabled={scrollEnabled} />;
 }
