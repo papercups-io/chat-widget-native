@@ -1,6 +1,6 @@
 {
   "name": "@papercups-io/chat-widget-native",
-  "version": "1.0.2",
+  "version": "1.0.3-beta.0",
   "description": "Papercups chat widget for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
