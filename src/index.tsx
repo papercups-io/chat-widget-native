@@ -36,7 +36,7 @@ export default function ChatWidget({
   agentAvailableText,
   agentUnavailableText,
   showAgentAvailability,
-  scrollEnabled = false,
+  scrollEnabled = true,
   customer = {} as CustomerMetadata,
 }: Props) {
   const config = {
