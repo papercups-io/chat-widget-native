@@ -8,7 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "@papercups-io/chat-widget-native": "1.0.2",
+    "@papercups-io/chat-widget-native": "1.0.3-beta.0",
     "expo": "~38.0.8",
     "expo-status-bar": "^1.0.2",
     "react": "~16.11.0",

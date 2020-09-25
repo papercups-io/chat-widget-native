@@ -21,6 +21,7 @@ export default function App() {
             subtitle="We'll reply as soon as we can 😊"
             greeting="Hi there! :wave: Have any questions?"
             baseUrl="https://alex-papercups-staging.herokuapp.com"
+            showAgentAvailability
             customer={{
               name: 'Test User',
               email: 'test@test.com',

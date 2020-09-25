@@ -21,6 +21,7 @@ type Props = {
   agentUnavailableText?: string;
   showAgentAvailability?: boolean;
   requireEmailUpfront?: boolean;
+  scrollEnabled?: boolean;
 };
 
 export default function ChatWidget({
@@ -35,6 +36,7 @@ export default function ChatWidget({
   agentAvailableText,
   agentUnavailableText,
   showAgentAvailability,
+  scrollEnabled = false,
   customer = {} as CustomerMetadata,
 }: Props) {
   const config = {
@@ -62,5 +64,5 @@ export default function ChatWidget({
   });
   const uri = `${iframeUrl}?${query}`;
 
-  return <WebView source={{uri}} scrollEnabled={false} />;
+  return <WebView source={{uri}} scrollEnabled={scrollEnabled} />;
 }
