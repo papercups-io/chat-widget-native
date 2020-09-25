@@ -12,6 +12,7 @@
   },
   "scripts": {
     "prepare": "bob build",
+    "pack": "npm pack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "reichert621",
