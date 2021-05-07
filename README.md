@@ -14,6 +14,7 @@ Try it out! https://snack.expo.io/@reichertjalex/papercups
 
 ```bash
 npm install --save @papercups-io/chat-widget-native
+npm install --save react-native-webview
 ```
 
 ## Usage
