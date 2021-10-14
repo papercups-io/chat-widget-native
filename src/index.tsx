@@ -9,55 +9,73 @@ type CustomerMetadata = {
 };
 
 type Props = {
+  token: string;
+  inbox?: string;
+  // TODO: deprecate, use `token` instead
+  accountId?: string;
   title?: string;
   subtitle?: string;
   primaryColor?: string;
-  accountId: string;
   baseUrl?: string;
   greeting?: string;
+  awayMessage?: string;
   customer?: CustomerMetadata | null;
   newMessagePlaceholder?: string;
+  emailInputPlaceholder?: string;
   agentAvailableText?: string;
   agentUnavailableText?: string;
   showAgentAvailability?: boolean;
+  iframeUrlOverride?: string;
   requireEmailUpfront?: boolean;
   scrollEnabled?: boolean;
+  debug?: boolean;
 };
 
 export default function ChatWidget({
+  token,
+  inbox,
+  accountId,
   title,
   subtitle,
   primaryColor,
-  accountId,
   baseUrl,
   greeting,
+  awayMessage,
   newMessagePlaceholder,
   requireEmailUpfront,
+  emailInputPlaceholder,
   agentAvailableText,
   agentUnavailableText,
   showAgentAvailability,
+  iframeUrlOverride,
   scrollEnabled = true,
+  debug = false,
   customer = {} as CustomerMetadata,
 }: Props) {
   const config = {
+    token,
+    inbox,
     title,
     subtitle,
     primaryColor,
-    accountId,
     baseUrl,
     greeting,
+    awayMessage,
     newMessagePlaceholder,
+    emailInputPlaceholder,
     agentAvailableText,
     agentUnavailableText,
     requireEmailUpfront: requireEmailUpfront ? 1 : 0,
     showAgentAvailability: showAgentAvailability ? 1 : 0,
+    debug: debug ? 1 : 0,
     mobile: 1,
+    accountId: accountId || token,
     // TODO: figure out the best way to handle identifying customers
     customer: JSON.stringify(customer),
     metadata: JSON.stringify(customer),
   };
 
-  const iframeUrl = 'https://chat-widget.papercups.io';
+  const iframeUrl = iframeUrlOverride || 'https://chat-widget.papercups.io';
   const query = qs.stringify(config, {
     skipEmptyString: true,
     skipNull: true,
