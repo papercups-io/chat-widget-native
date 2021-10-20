@@ -8,7 +8,7 @@ export default function App() {
 
   return (
     <View style={{flex: 1, padding: 24}}>
-      <Button title="Open chat" onPress={() => setModalVisible(true)} />
+      <Button title='Open chat!' onPress={() => setModalVisible(true)} />
 
       <Modal
         isVisible={isModalVisible}
@@ -16,11 +16,13 @@ export default function App() {
       >
         <View style={styles.modal}>
           <ChatWidget
-            accountId="eb504736-0f20-4978-98ff-1a82ae60b266"
-            title="Welcome to Papercups!"
+            token='eb504736-0f20-4978-98ff-1a82ae60b266'
+            accountId='eb504736-0f20-4978-98ff-1a82ae60b266'
+            inbox='3b944206-9411-4eaa-afc8-e6895a38242f'
+            title='Welcome to Papercups!'
             subtitle="We'll reply as soon as we can 😊"
-            greeting="Hi there! :wave: Have any questions?"
-            baseUrl="https://alex-papercups-staging.herokuapp.com"
+            greeting='Hi there! :wave: Have any questions?'
+            baseUrl='https://alex-papercups-staging.herokuapp.com'
             showAgentAvailability
             customer={{
               name: 'Test User',

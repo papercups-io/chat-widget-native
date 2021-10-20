@@ -6,10 +6,13 @@ type CustomerMetadata = {
   name?: string;
   email?: string;
   external_id?: string;
+  metadata?: {
+    [key: string]: any;
+  };
 };
 
 type Props = {
-  token: string;
+  token?: string;
   inbox?: string;
   // TODO: deprecate, use `token` instead
   accountId?: string;
