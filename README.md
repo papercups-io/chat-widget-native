@@ -13,8 +13,10 @@ Try it out! https://snack.expo.io/@reichertjalex/papercups
 ## Install
 
 ```bash
-npm install --save @papercups-io/chat-widget-native
+npm install --save @papercups-io/chat-widget-native react-native-webview
 ```
+
+Note: `react-native-webview` is required to render `RNCWebView`.
 
 ## Usage
 
